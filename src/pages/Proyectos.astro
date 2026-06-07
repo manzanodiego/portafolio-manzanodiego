@@ -1,0 +1,61 @@
+---
+const proyectos = [
+	{
+		nombre: "Verificación de Asistencias",
+		descripcion: "Sistema de control de asistencia mediante código QR",
+		tecnologias: ["Flask", "Sqlite", "Bootstrap"],
+		imagen: './src/img/projects/asistencia.png',
+		enlace: "#"
+	},
+	{
+		nombre: "Sistema de Oficialia de Partes",
+		descripcion: "Sistema de gestión de oficios y trámites para la oficialía de partes, para la materia de Servicios Web. Trabajando del lado del Backend con Node.js y Express.",
+		tecnologias: ["JavaScript","Node.js","Express", "MongoDB"],
+		imagen: './src/img/projects/SOP.png',
+		enlace: "#"
+	},
+	{
+		nombre: "API REST Flask",
+		descripcion: "API RESTful desarrollada con Flask para gestión de tareas y usuarios.",
+		tecnologias: ["Flask", "Python", "SQLAlchemy"],
+		imagen: './src/img/projects/contactos.png',
+		enlace: "#"
+	}
+];
+---
+
+<div class="text-white">
+	<h1 class="text-4xl font-bold mb-8">Mis Proyectos</h1>
+	
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+		{proyectos.map((proyecto) => (
+			<div class="border border-white rounded-md p-6 bg-blue-900/50 hover:bg-blue-800/50 transition-colors">
+				<div class="mb-4">
+					{proyecto.imagen ? (
+						<img src={proyecto.imagen} alt={proyecto.nombre} class="w-full h-48 object-cover rounded-md" />
+					) : (
+						<div class="w-full h-48 bg-neutral-900 rounded-md flex items-center justify-center">
+							<span class="text-neutral-500">Sin imagen</span>
+						</div>
+					)}
+				</div>
+				
+				<h3 class="text-xl font-bold mb-2">{proyecto.nombre}</h3>
+				<p class="text-neutral-300 mb-4">{proyecto.descripcion}</p>
+				
+				<div class="flex flex-wrap gap-2 mb-4">
+					{proyecto.tecnologias.map((tech) => (
+						<span class="bg-cyan-600 text-sm px-2 py-1 rounded">{tech}</span>
+					))}
+				</div>
+				
+				<a 
+					href={proyecto.enlace} 
+					class="inline-block bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-500 transition-colors"
+				>
+					Ver Proyecto
+				</a>
+			</div>
+		))}
+	</div>
+</div>

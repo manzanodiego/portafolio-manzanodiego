@@ -1,10 +1,25 @@
-<nav class="flex flex-row justify-end">
-    <div class="bg-neutral-800 text-white font-semibold rounded-bl-xl py-4 px-8 text-lg">
+---
+import perfilImage from '../img/perfildiego.jpg';
+---
+
+<nav class="flex flex-row justify-between items-center fixed top-0 left-0 w-full backdrop-blur-md px-100">
+    <div class="flex items-center">
+        <img
+        src={perfilImage.src}
+        alt="Diego Manzano"
+        class="w-10 h-10 rounded-full m-4"
+        />
+        <h1 class="text-white font-medium">Diego Manzano</h1>
+    </div>
+    <div class=" text-white font-medium rounded-bl-xl text-md">
         <ul class="flex flex-row space-x-8 ">
-            <li class="text-blue-500">Acerca de mi</li>
-            <li>Resumen</li>
-            <li class="">Proyectos</li>
-            <li class="">Contacto</li>
+            <li class="" >
+                <a href="/">Inicio</a>
+            </li>
+            <li class="hover:text-blue-500"><a href="/proyectos">Proyectos</a></li>
+            <li class="hover:text-blue-500"><a href="/about">Sobre mi</a></li>
+            <li class="hover:text-blue-500"><a href="/skills">Skill</a></li>
+            <li class="hover:text-blue-500"><a href="/contacto">Contacto</a></li>
         </ul>
     </div>
 </nav>
