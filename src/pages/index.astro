@@ -1,17 +1,19 @@
 ---
 import "../styles/global.css";
-import Perfil from "../components/Perfil.astro";
+
 import Navbar from "../components/Navbar.astro";
 import About from "../pages/About.astro"
 import Proyectos from "./Proyectos.astro";
 import Skills from "./Skills.astro";
+import Home from "./Home.astro";
+import Contacto from "./Contacto.astro";
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		
+		<link rel="icon" href="/icon-md.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Diego Manzano - Programador Web</title>
@@ -21,14 +23,26 @@ import Skills from "./Skills.astro";
 	</head>
 	<body class="flex flex-col px-100 gap-4 font-montserrat relative" id="gradient-bg" >
 		<Navbar></Navbar>
-		<Perfil></Perfil>
 		
-		<div class="flex flex-col">
-			<div class="pt-10 px-10">
+		<main class="h-screen w-full snap-y snap-mandatory scroll-smooth">
+			<section class=" h-screen w-full snap-start ">
+				<Home></Home>
+			</section>
+			<section class=" h-screen w-full snap-start pt-16" id="about">
 				<About></About>
+			</section>
+			<section class="h-screen w-full snap-start pt-16" id="skill">
 				<Skills></Skills>
+			</section>
+			<section class="h-screen w-full snap-start pt-16" id="proyectos">
 				<Proyectos></Proyectos>
-			</div>
-		</div>
+			</section>
+			<section class="h-screen w-full snap-start pt-16" id="contacto">
+				<Contacto></Contacto>
+			</section>
+		</main>
+
+
+
 	</body>
 </html>

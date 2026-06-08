@@ -1,10 +1,17 @@
 
+---
+import Layout from "../layouts/Layout.astro";
+import aboutimg from '../img/perfil.png';
 
+---
         
-
-<div class="text-white ">
+<Layout title="Sobre mi">
+<div class="text-white flex flex-row space-x-10">
+    <div class="rounded-full p-20 bg-sky-800/50">
+        <img src={aboutimg.src} alt="">
+    </div>
     <div>
-        <h1 class="font-bold text-xl pb-1.5" >Acerca de mi</h1>
+        <h1 class="font-bold text-lime-500 text-4xl pb-1.5" >Acerca de mi</h1>
         <p class="text-justify text-lg">
             Soy desarrollador web autodidacta y actualmente estudiante de la
             carrera en Ingeniería en Sistemas Computacionales en el Instituto
@@ -19,4 +26,13 @@
     
     
 </div>
+
+</Layout>
+
+<style>
+    img{
+        width: 900px;
+    }
+</style>
+
 

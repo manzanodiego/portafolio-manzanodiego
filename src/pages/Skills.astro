@@ -4,6 +4,7 @@ import css from '../img/stack/CSS.png';
 import bootstrap from '../img/stack/bootstrap.svg';
 import tailwindcss from '../img/stack/tailwindcss.svg';
 import javascript from '../img/stack/javascript.svg';
+import astro from '../img/stack/astro-icon-light.svg';
 
 const skillsFrontend = [
     { name: 'HTML', img: html },
@@ -11,6 +12,7 @@ const skillsFrontend = [
     { name: 'Bootstrap', img: bootstrap },
     { name: 'Tailwind', img: tailwindcss },
     { name: 'JavaScript', img: javascript },
+    { name: 'Astro', img: astro}
 ];
 
 import flask from '../img/stack/flask.svg';
@@ -33,20 +35,23 @@ import linux from '../img/stack/linux.svg';
 import git from '../img/stack/git.png';
 import fedora from '../img/stack/fedora.png';
 import vscode from '../img/stack/vscode.png';
+import postman from '../img/stack/postman.svg'
 
 const herramientas = [
     { name: 'Linux', img: linux },
     { name: 'Git', img: git },
     { name: 'Fedora', img: fedora },
     { name: 'VS Code', img: vscode },
+    { name: 'Postman', img: postman}
 ];
 ---
 
+<h3 class="text-lime-500 text-4xl font-bold">Tecnologias</h3>
 <div class="mt-10 text-white">
     <h2 class="font-bold text-xl pb-1.5">Tecnologias Frontend</h2>
     <div class="flex flex-wrap gap-4">
         {skillsFrontend.map((skill) => 
-            <div class="bg-blue-900/50 p-4 rounded-md flex flex-col items-center">
+            <div class="bg-blue-900/50 p-4 rounded-md flex flex-col items-center hover:border border-blue-700 hover:bg-blue-800/50 transition-colors">
                 <img class="iconos" src={skill.img.src} alt={skill.name} />
                 <span class="mt-2 text-sm">{skill.name}</span>
             </div>
@@ -58,7 +63,7 @@ const herramientas = [
     <h2 class="font-bold text-xl pb-1.5">Tecnologias Backend</h2>
     <div class="flex flex-wrap gap-4">
         {skillsBackend.map((skill) => 
-            <div class="bg-blue-900/50 p-4 rounded-md flex flex-col items-center">
+            <div class="bg-blue-900/50 p-4 rounded-md flex flex-col items-center hover:border border-blue-700 hover:bg-blue-800/50 transition-colors">
                 <img class="iconos" src={skill.img.src} alt={skill.name} />
                 <span class="mt-2 text-sm">{skill.name}</span>
             </div>
@@ -70,7 +75,7 @@ const herramientas = [
     <h2 class="font-bold text-xl pb-1.5">Herramientas</h2>
     <div class="flex flex-wrap gap-4">
         {herramientas.map((skill) => 
-            <div class="bg-blue-900/50 p-4 rounded-md flex flex-col items-center">
+            <div class="bg-blue-900/50 p-4 rounded-md flex flex-col items-center hover:border border-blue-700 hover:bg-blue-800/50 transition-colors">
                 <img class="iconos" src={skill.img.src} alt={skill.name} />
                 <span class="mt-2 text-sm">{skill.name}</span>
             </div>
