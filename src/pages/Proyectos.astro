@@ -1,24 +1,30 @@
 ---
+import Image from "astro/components/Image.astro";
+
+import imgAsistencia from '../img/projects/asistencia.png'; 
+import imgSOP from '../img/projects/SOP.png';
+import imgContactos from '../img/projects/contactos.png';
+
 const proyectos = [
 	{
 		nombre: "Verificación de Asistencias",
 		descripcion: "Sistema de control de asistencia mediante código QR.",
 		tecnologias: ["Flask", "Sqlite", "Bootstrap"],
-		imagen: './src/img/projects/asistencia.png',
+		imagen: imgAsistencia,
 		enlace: "https://github.com/manzanodiego/verficacion-asistencia-ss"
 	},
 	{
 		nombre: "Sistema de Oficialia de Partes",
 		descripcion: "Sistema de gestión de oficios y trámites para la oficialía de partes, para la materia de Servicios Web. Trabajando del lado del Backend con Node.js y Express.",
 		tecnologias: ["JavaScript","Node.js","Express", "MongoDB"],
-		imagen: './src/img/projects/SOP.png',
+		imagen: imgSOP,
 		enlace: "https://github.com/Samuelangas24/Proyecto_DSW"
 	},
 	{
 		nombre: "API REST Flask",
 		descripcion: "API RESTful desarrollada con Flask para gestión de contactos",
 		tecnologias: ["Flask", "Python", "SQLAlchemy"],
-		imagen: './src/img/projects/contactos.png',
+		imagen: imgContactos,
 		enlace: "https://github.com/manzanodiego/contactos-flask"
 	}
 ];
@@ -34,7 +40,7 @@ const proyectos = [
 				<div class="flex flex-col justify-between">
 					<div class="mb-4">
 					{proyecto.imagen ? (
-						<img src={proyecto.imagen} alt={proyecto.nombre} class="w-full h-48 object-cover rounded-md" />
+						<Image src={proyecto.imagen} alt={proyecto.nombre} class="w-full h-48 object-cover rounded-md" />
 					) : (
 						<div class="w-full h-48 bg-neutral-900 rounded-md flex items-center justify-center">
 							<span class="text-neutral-500">Sin imagen</span>
